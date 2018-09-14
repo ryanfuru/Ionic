@@ -1,0 +1,8 @@
+{
+  "name": "AirData",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "07935af9"
+}
