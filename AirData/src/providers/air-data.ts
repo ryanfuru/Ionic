@@ -16,7 +16,7 @@ export class AirData {
         let data:Observable<any>;
         data = this.http.get('../assets/importData.json')
         data.subscribe(result => {
-            for (var i = 0; i < 50; i++) {
+            for (var i = 0; i < 100; i++) {
                 this.measurements.push(result.data.day[0].values[i][1]);
                 this.labels.push(new Date(result.data.day[0].values[i][0]));
             }
@@ -30,31 +30,4 @@ export class AirData {
     getLabels(){
         return this.labels;
     }
-
-    presentActionSheet() {
-    const actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your album',
-      buttons: [
-        {
-          text: 'Destructive',
-          role: 'destructive',
-          handler: () => {
-            console.log('Destructive clicked');
-          }
-        },{
-          text: 'Archive',
-          handler: () => {
-            console.log('Archive clicked');
-          }
-        },{
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        }
-      ]
-    });
-    actionSheet.present();
-  }
 }

@@ -13,7 +13,7 @@ export class HomePage {
   lineChart: any;
 
   constructor(
-    public navCtrl: NavController,
+    public navCtrl: NavController, 
     public airService: AirData,
     public platform: Platform,
     public actionSheetCtrl: ActionSheetController
